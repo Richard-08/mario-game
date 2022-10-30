@@ -35,7 +35,7 @@ export class Level implements LevelInterface {
           return type;
         }
 
-        this.actors.push(type.create(new Vector(x, y), ch));
+        this.actors.push(type.create(new Vector(x, y)));
 
         return "empty";
       });

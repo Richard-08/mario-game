@@ -1,7 +1,7 @@
 import { Vector } from "../Vector";
 import { State } from "../State";
 import { VectorInterface, StateInterface, Actor } from "../types";
-import { ActorEnums } from "../enums";
+import { ActorEnums, StatusEnums } from "../enums";
 
 export class Lava implements Actor {
   position: VectorInterface;
@@ -31,7 +31,7 @@ export class Lava implements Actor {
   }
 
   collide(state: StateInterface): StateInterface {
-    return new State(state.level, state.actors, "lost");
+    return new State(state.level, state.actors, StatusEnums.LOST);
   }
 
   update(time: number, state: StateInterface) {

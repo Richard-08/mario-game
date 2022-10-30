@@ -4,7 +4,15 @@ import { Coin } from "./actors";
 import { Ghost } from "./actors";
 import { Mushroom } from "./actors";
 
-export const CHARACTERS = {
+export const CHARACTERS: {
+  [key: string]:
+    | string
+    | typeof Player
+    | typeof Coin
+    | typeof Lava
+    | typeof Mushroom
+    | typeof Ghost;
+} = {
   ".": "empty",
   "#": "wall",
   "+": "lava",
@@ -13,4 +21,4 @@ export const CHARACTERS = {
   v: Lava,
   E: Mushroom,
   G: Ghost,
-};
+} as const;
