@@ -1,14 +1,16 @@
 import { StatusEnums, ActorEnums } from "./enums";
 
+export type Constructable<T = any> = new (...args: any[]) => T;
+
 export type StatusType = `${StatusEnums}`;
 
 export type ActorType = `${ActorEnums}`;
 
 export type TrackKeysType = {
-  ArrowLeft?: boolean;
-  ArrowRight?: boolean;
-  ArrowUp?: boolean;
+  [key: string]: boolean;
 };
+
+export type EventKeysType = Readonly<string[]>;
 
 export interface VectorInterface {
   x: number;

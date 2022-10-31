@@ -22,3 +22,9 @@ export const CHARACTERS: {
   E: Mushroom,
   G: Ghost,
 } as const;
+
+export const EVENT_KEYS: Readonly<string[]> = [
+  "ArrowLeft",
+  "ArrowRight",
+  "ArrowUp",
+] as const;

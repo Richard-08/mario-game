@@ -2,6 +2,7 @@ import { Vector } from "../Vector";
 import { State } from "../State";
 import { VectorInterface, StateInterface, Actor } from "../types";
 import { ActorEnums, StatusEnums } from "../enums";
+import { CONFIG } from "../config";
 
 export class Coin implements Omit<Actor, "collide" | "update"> {
   position: VectorInterface;
@@ -19,8 +20,8 @@ export class Coin implements Omit<Actor, "collide" | "update"> {
     this.basePos = basePos;
     this.wobble = wobble;
 
-    this.wobbleSpeed = 8;
-    this.wobbleDist = 0.07;
+    this.wobbleSpeed = CONFIG.coinWobbleSpeed;
+    this.wobbleDist = CONFIG.coinWobbleDist;
   }
 
   get type() {

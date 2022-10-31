@@ -6,6 +6,7 @@ import {
   StateInterface,
 } from "../types";
 import { ActorEnums } from "../enums";
+import { CONFIG } from "../config";
 
 export class Player implements Omit<Actor, "collide" | "update"> {
   position: VectorInterface;
@@ -18,9 +19,9 @@ export class Player implements Omit<Actor, "collide" | "update"> {
     this.position = position;
     this.speed = speed;
 
-    this.playerXSpeed = 7;
-    this.gravity = 30;
-    this.jumpSpeed = 17;
+    this.playerXSpeed = CONFIG.playerXSpeed;
+    this.gravity = CONFIG.gravity;
+    this.jumpSpeed = CONFIG.jumpSpeed;
   }
 
   get type() {

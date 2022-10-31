@@ -1,7 +1,16 @@
 import { LevelInterface, StateInterface } from "../types";
 import { createElement, drawGrid, drawActors } from "../utils";
 
-export class DOMDisplay {
+export interface DisplayInterface {
+  el: HTMLElement;
+  actorLayer: HTMLElement | null;
+  scale: number;
+  updateView: (state: StateInterface) => void;
+  syncState: (state: StateInterface) => void;
+  clear: () => void;
+}
+
+export class DOMDisplay implements DisplayInterface {
   el: HTMLElement;
   actorLayer: HTMLElement | null;
   scale: number;
@@ -54,5 +63,9 @@ export class DOMDisplay {
     this.el.appendChild(this.actorLayer);
     this.el.className = `game ${state.status}`;
     this.updateView(state);
+  }
+
+  clear() {
+    this.el.remove();
   }
 }

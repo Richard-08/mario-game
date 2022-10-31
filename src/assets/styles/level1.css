@@ -1,8 +1,8 @@
 .background {
     table-layout: fixed;
     border-spacing: 0;
-    background-image: url(https://static.radulescu.me/examples/clouds/clouds1000.png);
-    background-image: url(https://static.radulescu.me/examples/clouds/clouds1000.png) 0 200px, url(https://static.radulescu.me/examples/clouds/clouds1200_1.png) 0 300px, url(https://static.radulescu.me/examples/clouds/clouds1000_blur3.png) 100px 250px;
+    background-image: url("../images/clouds_1.png");
+    background-image: url("../images/clouds_1.png") 0 200px, url("../images/clouds_2.png") 0 300px, url("../images/clouds_blur.png") 100px 250px;
     background-color: skyblue;
     animation: wind 30s linear infinite;
 }
@@ -61,7 +61,7 @@
 }
 
 .player {
-    background-image: url('Mario-Running-icon.png');
+    background-image: url('../images/mario.png');
     background-size: 100% 100%;
 }
 
@@ -109,11 +109,11 @@
 }
 
 .ghost {
-    background-image: url('Ghost.png');
+    background-image: url('../images/ghost.png');
     background-size: 100% 100%;
 }
 
-.enemy {
-    background-image: url('mushroom.png');
+.mushroom {
+    background-image: url('../images/mushroom.png');
     background-size: 100% 100%;
 }

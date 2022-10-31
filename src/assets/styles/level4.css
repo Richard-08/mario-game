@@ -79,7 +79,7 @@
 }
 
 .player {
-    background-image: url('Mario-Running-icon.png');
+    background-image: url('../images/mario.png');
     background-size: 100% 100%;
 }
 
@@ -127,11 +127,11 @@
 }
 
 .monster {
-    background-image: url('Ghost.png');
+    background-image: url('../images/ghost.png');
     background-size: 100% 100%;
 }
 
-.enemy {
-    background-image: url('mushroom.png');
+.mushroom {
+    background-image: url('../images/mushroom.png');
     background-size: 100% 100%;
 }
