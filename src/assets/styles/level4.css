@@ -126,7 +126,7 @@
     position: relative;
 }
 
-.monster {
+.ghost {
     background-image: url('../images/ghost.png');
     background-size: 100% 100%;
 }

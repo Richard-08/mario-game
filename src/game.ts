@@ -72,11 +72,6 @@ export async function runGame(
   for (let level = 0; level < levels.length && lives > 0; ) {
     if (styles) {
       styles.attributes[1].nodeValue = `./src/assets/styles/${levels[level].styles}`;
-      /* styles.setAttribute("type", "stylesheet");
-      styles.setAttribute(
-        "href",
-        `./src/assets/styles/${levels[level].styles}`
-      ); */
     }
 
     let status = await runLevel(
